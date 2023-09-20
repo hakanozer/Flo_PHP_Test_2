@@ -41,6 +41,9 @@ class ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e
     public static $classMap = array (
         'Action' => __DIR__ . '/../..' . '/src/Action.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Database' => __DIR__ . '/../..' . '/src/Database.php',
+        'INote' => __DIR__ . '/../..' . '/src/repositories/INote.php',
+        'NoteService' => __DIR__ . '/../..' . '/src/services/NoteService.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',

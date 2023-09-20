@@ -8,6 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'Action' => $baseDir . '/src/Action.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Database' => $baseDir . '/src/Database.php',
+    'INote' => $baseDir . '/src/repositories/INote.php',
+    'NoteService' => $baseDir . '/src/services/NoteService.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',

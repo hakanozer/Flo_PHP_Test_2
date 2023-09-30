@@ -7,14 +7,25 @@ namespace Composer\Autoload;
 class ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e
 {
     public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
             'PhpParser\\' => 10,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
         ),
         'D' => 
         array (
@@ -24,9 +35,30 @@ class ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -38,11 +70,25 @@ class ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'J' => 
+        array (
+            'JsonMapper' => 
+            array (
+                0 => __DIR__ . '/..' . '/netresearch/jsonmapper/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Action' => __DIR__ . '/../..' . '/src/Action.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Database' => __DIR__ . '/../..' . '/src/Database.php',
+        'DummyService' => __DIR__ . '/../..' . '/src/services/DummyService.php',
+        'Food' => __DIR__ . '/../..' . '/src/Models/Food.php',
         'INote' => __DIR__ . '/../..' . '/src/repositories/INote.php',
+        'JWTUser' => __DIR__ . '/../..' . '/src/Models/JWTUser.php',
+        'Note' => __DIR__ . '/../..' . '/src/Models/Note.php',
         'NoteService' => __DIR__ . '/../..' . '/src/services/NoteService.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
@@ -464,7 +510,7 @@ class ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e
         'PharIo\\Version\\VersionConstraintParser' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintParser.php',
         'PharIo\\Version\\VersionConstraintValue' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintValue.php',
         'PharIo\\Version\\VersionNumber' => __DIR__ . '/..' . '/phar-io/version/src/VersionNumber.php',
-        'Product' => __DIR__ . '/../..' . '/src/models/Product.php',
+        'Product' => __DIR__ . '/../..' . '/src/Models/Product.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -673,7 +719,7 @@ class ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
-        'User' => __DIR__ . '/../..' . '/src/models/User.php',
+        'User' => __DIR__ . '/../..' . '/src/Models/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -681,6 +727,7 @@ class ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit65011dfe3caf1b1dc9f8209d572d0d1e::$classMap;
 
         }, null, ClassLoader::class);
